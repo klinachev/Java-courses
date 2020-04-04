@@ -3,8 +3,6 @@ package queue;
 public class ArrayQueueModule {
     private static int start = 0, size = 0;
     private static Object[] elements = new Object[5];
-
-    // :NOTE: queue is not cycled
     
     // pre: element ≠ null
     // post: n = n' + 1 ^ a[n] = element

@@ -33,7 +33,6 @@ public class LinkedQueue extends AbstractQueue {
     }
 
     private class Node {
-        // :NOTE: is value mutable? where is `final` modifier?
         private Object value = null;
         private Node next;
 

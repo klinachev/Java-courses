@@ -6,7 +6,6 @@ public class ArrayQueueADT {
 
     // pre: element ≠ null ^ queue != null
     // post: n = n' + 1 ^ a[n] = element
-    // :NOTE: What about `queue`, can it be null?
     public static void enqueue(ArrayQueueADT queue, Object element) {
         assert element != null;
 
