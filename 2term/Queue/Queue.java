@@ -3,7 +3,6 @@ package queue;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
-// :NOTE: where is contracts?
 public interface Queue{
     void enqueue(Object element);
     Object dequeue();
