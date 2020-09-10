@@ -15,8 +15,6 @@ public abstract class AbstractQueue implements Queue {
 	//		∀i: predicate(a[i]) == true --> ∃j: mas[j] == a[i],
 	//		∀i1 < i2: predicate(a[i1]) == true ^ predicate(a[i2]) == true --> ∃j1 < j2: mas[j1] == a[i1], mas[j2] == a[i2]
     public Queue filter(Predicate<Object> pred) throws IllegalAccessException, InstantiationException {
-        // :NOTE: where is parameterization?
-        // :NOTE: use of deprecated methods?
         Queue a = sameClass();
         for (int i = size; i > 0; i--) {
             Object b = this.dequeue();
@@ -32,7 +30,6 @@ public abstract class AbstractQueue implements Queue {
 	// post: mas: type(mas) == type(a), 
 	//		∀i=1..n --> mas[i] == function(a[i])
     public Queue map(Function<Object, Object> func) throws IllegalAccessException, InstantiationException {
-        // :NOTE: copy-paste code for new instance of queue
         Queue a = sameClass();
         for (int i = size; i > 0; i--) {
             Object b = this.dequeue();
