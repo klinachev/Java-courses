@@ -73,7 +73,7 @@ public class MyExpressionParser<T extends Number> {
 
     private MyTripleExpression<T> parseConst() throws ParserException {
         if (skipWhitespace()) {
-            throw new ParserException("Constant was expected at the end of the expressions.expressions.generic.expression");
+            throw new ParserException("Constant was expected at the end of the expression");
         }
         int start = it;
         if (st.charAt(it) == '-') {
@@ -94,7 +94,7 @@ public class MyExpressionParser<T extends Number> {
 
     private MyTripleExpression<T> parseVariable() throws ParserException {
         if (skipWhitespace()) {
-            throw new ParserException("Variable was expected at the end of the expressions.expressions.generic.expression");
+            throw new ParserException("Variable was expected at the end of the expression");
         }
         int start = it;
         while (it < st.length() && (Character.isAlphabetic(st.charAt(it)) || isDigit(it))) {
@@ -189,7 +189,7 @@ public class MyExpressionParser<T extends Number> {
     private MyTripleExpression<T> parseUnaryOperation() throws ParserException {
         // System.out.println(it);
         if (skipWhitespace()) {
-            throw new ParserException("Number or variable expected at the end of the expressions.expressions.generic.expression");
+            throw new ParserException("Number or variable expected at the end of the expression");
         }
         int last = it;
         if (st.charAt(it) == '-' && it + 1 < st.length() && !isDigit(it + 1)) {
@@ -250,7 +250,7 @@ public class MyExpressionParser<T extends Number> {
             skipWhitespace();
         }
         if (it >= st.length() && bracket) {
-            throw new ParserException("Expected \")\" at the end of the expressions.expressions.generic.expression");
+            throw new ParserException("Expected \")\" at the end of the expression");
         }
         if (haveOperation) {
             throw new ParserException("Unexpected \")\" after operation, pos: " + it);
