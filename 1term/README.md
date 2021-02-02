@@ -1,10 +1,6 @@
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html><head>
-<wbr>
-<table id="body"><tr><td id="main">
-<h3 id="homework-1">
-Домашнее задание 1. Запусти меня!</h3><p><a href="http://www.kgeorgiy.info/git/geo/prog-intro-2020/">Тесты к домашним заданиям</a></p><ol><li>
+<html><head><table id="body"><tr><td id="main"><h3 id="homework-1">Домашнее задание 1. Запусти меня!</h3><p><a href="http://www.kgeorgiy.info/git/geo/prog-intro-2020/">Тесты к домашним заданиям</a></p><ol><li>
             Установите
             <a href="https://adoptopenjdk.net/?variant=openjdk14&amp;jvmVariant=hotspot">JDK 11+</a></li><li>
             Скопируйте один из вариантов <code>HelloWorld</code>,
@@ -270,9 +266,10 @@ grace 1
             следующим содержимым:
 <pre>
     __1~2*34*5~6__
-</pre></li><li>
-            Разработанные классы должны находиться в пакете <tt>markup</tt>.
-        </li></ol><h3 id="homework-8">Домашнее задание 8. Чемпионат</h3><ol><li>
+</pre></li>
+<li>
+            Разработанные классы должны находиться в пакете markup.</li></ol>
+            <h3 id="homework-8">Домашнее задание 8. Чемпионат</h3><ol><li>
             Решите как можно больше задач Чемпионата северо-запада России
             по программированию 2019.
         </li><li>
@@ -519,7 +516,4 @@ HTML-символы, такие как <code>&lt;</code>, <code>&gt;</code> и <
 не означают выделение?
 Они так же могут быть заэкранированы
 при помощи обратного слэша: *.</p><p>Лишние пустые строки должны игнорироваться.</p><p>Любите ли вы <em>вложеные <strong>выделения</strong></em> так,
-как <strong><s>люблю</s></strong> их я?</p></li></ul></li></ol></td><td id="sidebar"><div id="sidebar-head"><form method="get" action="https://www.google.com/search"><p><input type="hidden" name="sitesearch" value="kgeorgiy.info"></p><table><tr><td style="width:100%"><input style="width:100%" type="text" name="q" maxlength="255"></td><td><button type="submit" value="Search"><img alt="Search" src="/design/find.png" width="16" height="16"></button></td></tr></table></form></div><div id="sidebar-body"><h3><a href="#homework-1">Домашнее задание 1. Запусти меня!</a></h3><h3><a href="#homework-2">Домашнее задание 2. Сумма чисел</a></h3><h3><a href="#homework-3">Домашнее задание 3. Реверс</a></h3><h3><a href="#homework-4">Домашнее задание 4. Статистика слов</a></h3><h3><a href="#homework-5">Домашнее задание 5. Свой сканер</a></h3><h3><a href="#homework-6">Домашнее задание 6. Статистика слов++</a></h3><h3><a href="#homework-7">Домашнее задание 7. Разметка</a></h3><h3><a href="#homework-8">Домашнее задание 8. Чемпионат</a></h3><h3><a href="#homework-9">Домашнее задание 9. Игра m,n,k</a></h3><h3><a href="#homework-10">Домашнее задание 10. Выражения</a></h3><h3><a href="#homework-11">Домашнее задание 11. Разбор выражений</a></h3><h3><a href="#homework-12">Домашнее задание 12. Обработка ошибок</a></h3><h3><a href="#homework-13">Домашнее задание 13. Markdown to HTML</a></h3><h1><a href="#N66359">Заголовок первого уровня</a></h1><h2><a href="#N66361">Второго</a></h2><h3><a href="#N66363">Третьего ## уровня</a></h3><h4><a href="#N66365">Четвертого
-# Все еще четвертого</a></h4></div>
-</wbr>
-</body></html>
+как <strong><s>люблю</s></strong> их я?</p></li></ul></li></ol></td></tr></table></body></html>
