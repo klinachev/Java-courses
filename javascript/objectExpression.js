@@ -1,7 +1,5 @@
 "use strict";
 
-// :NOTE: common: 7, *
-
 function AbstractFactory(create, evaluate, diff, toString, prefix, postfix) {
     function Create() {
         create.call(this, arguments);
@@ -36,7 +34,6 @@ const availableVariables = {
     "y": 1,
     "z": 2
 };
-// :NOTE: duplicated declaration of variable names
 
 const Variable = ArgumentFactory(
     function(arg) {this.name = arg[0]},
@@ -57,7 +54,6 @@ function toPrint(args, f, start, end) {
     return start + args.map(f).join(' ') + end;
 }
 
-// :NOTE: copy-pasted code for `toString`, `prefix`, `postfix`.
 const Operation = AbstractFactory(
     function (args) {
         this.args = Array.from(args);
@@ -88,7 +84,6 @@ const Operation = AbstractFactory(
     }
 );
 
-//:NOTE: duplicated operators signs declaration (they are already mentioned in operators)
 const availableOperation = {};
 
 function OperationFactory(toStr, calc, diffCalc) {
@@ -199,7 +194,6 @@ function ParseErrorFactory(name) {
 
 const ParseError = ParseErrorFactory("ParseError");
 
-// :NOTE: too many code for parser. The limit is 50-60 non-blank lines
 function parsePrefix(expression) {
     return expressionParser(expression, arg => arg, pos => pos, "(", ")");
 }
