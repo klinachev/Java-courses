@@ -75,7 +75,6 @@ const argumentsCount = {
 
 function parse(expression) {
     let stack = [];
-    // :NOTE: why not continue 77 line with `forEach`?
     (expression.split(" ").filter(s => s.length > 0)).forEach((element) => {
         if (element in availableOperation) {
             let args = [];
