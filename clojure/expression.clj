@@ -1,4 +1,4 @@
-﻿(comment ":NOTE: val is redundant here")
+
 (def constant constantly)
 
 (defn variable [name] (fn [variables] (get variables name)))
@@ -14,7 +14,6 @@
 
 (def subtract (operation -))
 
-(comment ":NOTE: the same as subtract (copy-paste)")
 (def negate subtract)
 
 (def multiply (operation *))
@@ -46,7 +45,6 @@
   (apply (proto-get this key) this args))
 (defn field [key]
   #(proto-get % key))
-(comment ":NOTE: methods bellow can be generalized")
 (def _args (field :args))
 (def _binary (field :binary))
 (def _arg (field :arg))
@@ -81,7 +79,6 @@
     )))
 (def zero (Constant 0))
 (def one (Constant 1))
-(comment ":NOTE: too complex declaration, call of 1 function was expected")
 (def Variable 
   (constructor 
     ConstVarCons 
@@ -268,7 +265,7 @@
 
 (defn *infSeq [p]
   (+seqn 1 *ws (+char "(") *ws p *ws (+char ")")))
-(comment ":NOTE: too much code for primitive combinator")
+
 (defn binaryOperation [prior pars]
    (fn [expr]
     ((fn rec [a]
@@ -285,7 +282,7 @@
         ((+seqn 0 *ws toOperationToken) (-tail a))))
    ((+seqn 0 *ws pars) expr))))
 
-(comment ":NOTE: this is not parser-combinators style (too many Clojure functions and condition constructions)")
+
 (defn notBinaryOperation [p]
   (fn [expr]
     ((fn [a]
@@ -309,14 +306,3 @@
             (delay
               (binaryOperation 0 (*arg (*value)))))]
     (+parser (+seqn 0 *ws (*value) *ws))))
-
-(comment
-  (parseObjectInfix "(negate(x) / 2.0)")
-(println (parseObjectInfix "negate x / 2,0"))
-(println (toStringInfix(parseObjectInfix " negate    1 2 3  ")))
-(println (parseObjectInfix " avg  (1 * 2)  2    3    4  "))
-  (println (toString(parseObjectInfix " 3 - avg  (1 * -2 + 2)  2    3    4 * 2 ")))
-(println (toString(parseObjectInfix " avg  (1 * -2 + 2)  2    3    4  ")))
-(println (toString(parseObjectInfix " avg  (1 * -2 + 2)  -2    -3    4  ")))
-(println (toString (parseObjectInfix "negate  (negate 460820863.0/( -1733363911.0+y ))+1620305239.0/(z+z)")))
-(println (toString (parseObjectInfix "(negate(x) / 2,0 + 3)"))))
