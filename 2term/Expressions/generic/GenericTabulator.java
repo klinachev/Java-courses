@@ -28,7 +28,7 @@ public class GenericTabulator implements Tabulator {
             expr = parser.parse(expression);
         } catch (ParserException e) {
             e.printStackTrace();
-            throw new RuntimeException("Can't parse expressions.expressions.generic.expression");
+            throw new RuntimeException("Can't parse expression");
         }
         Object[][][] table = new Object[x2 - x1 + 1][y2 - y1 + 1][z2 - z1 + 1];
         for (int i = x1; i <= x2; i++) {
